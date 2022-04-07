@@ -766,6 +766,13 @@ header img
     margin-bottom: 1rem;
 }
 
+.desc-item > a {
+  font-size: calc(.5vw + 1rem);
+  margin-top: 1rem;
+  width: fit-content;
+  cursor: pointer;
+}
+
 .tag-wrap
 {
     display: flex;
