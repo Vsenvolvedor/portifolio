@@ -1,15 +1,23 @@
-export default function copy()
-{
-        
-    const copySelect = document.querySelector('[data-copy]')
+export default class Copy {
+  
+  constructor(copySelect,activeClass){
+    this.copySelect = document.querySelector(copySelect)
+    this.activeClass = activeClass
 
-    copySelect.addEventListener('click',copyToBoard)
+    this.copyToBoard = this.copyToBoard.bind(this)
+  }
+  
+  copyToBoard() { 
+    const copy = this.copySelect.dataset.copy
+    this.copySelect.classList.add(this.activeClass)
+    navigator.clipboard.writeText(copy)
+    setTimeout(()=>{this.copySelect.classList.remove(this.activeClass)},1000)
+  }
 
-    function copyToBoard()
-    { 
-        const copy = copySelect.dataset.copy
-        copySelect.classList.add('active')
-        navigator.clipboard.writeText(copy)
-        setTimeout(()=>{copySelect.classList.remove('active')},1000)
-    }
+  addClickEvent(){this.copySelect.addEventListener('click', this.copyToBoard)}
+
+  init(){
+    this.addClickEvent()
+    return this
+  }
 }
