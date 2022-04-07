@@ -43,14 +43,6 @@ export default function slide()
                 slide[index].classList.remove(act)
                 return false
             }
-            else if(item.classList.contains(act) && !item.nextElementSibling)
-            {
-                slide[0].dataset.anima = 'left'
-                slide[index].dataset.anima = ''
-                slide[index].classList.remove(act)
-                slide[0].classList.add(act)
-                return false
-            }
          return true
         }
     }
@@ -66,15 +58,6 @@ export default function slide()
                 slide[index].dataset.anima = ''
                 slide[index].previousElementSibling.classList.add(act)
                 slide[index].classList.remove(act)
-                return false
-            }
-            else if(item.classList.contains(act) && !item.previousElementSibling)
-            {
-                slide[slide.length - 1].dataset.anima = 'right'
-                slide[index].dataset.anima = ''
-                slide[index].classList.remove(act)
-                slide[slide.length - 1].classList.add(act)
-                
                 return false
             }
          return true

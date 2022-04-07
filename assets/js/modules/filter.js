@@ -33,6 +33,7 @@ export default function filter()
         all.forEach((save)=>{
             wraper.appendChild(save) 
         })
+        
     }
 
     function activeType0()
@@ -47,6 +48,7 @@ export default function filter()
         type0.forEach((tp)=>{
             wraper.appendChild(tp)
         })
+     
     }
 
     function activeType1()
@@ -61,6 +63,7 @@ export default function filter()
         type1.forEach((tp)=>{
             wraper.appendChild(tp)
         })
+        
     }
-   
+    
 }
