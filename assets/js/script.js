@@ -13,4 +13,5 @@ filter()
 column()
 slide()
 
+
 const copy = new Copy('[data-copy]','active').init()
