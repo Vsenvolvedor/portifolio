@@ -604,7 +604,7 @@ header img
     justify-items: center;
     gap: 3rem;
     margin: 0 auto;
-    max-width: 900px;
+    max-width: fit-content;
 }
 
 .linha
@@ -616,7 +616,7 @@ header img
 
 .grid-conhec li 
 {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 /* PROJETOS */
@@ -971,21 +971,6 @@ footer a.under
         margin: .6%;
     }
 
-    .grid-conhec
-    {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 2px 1fr;
-        justify-items: flex-start;
-        padding: 0 3rem;
-        gap: 0;       
-    }
-
-    .grid-conhec li 
-    {
-        margin-top: 1.5rem;
-    }
-
-    
     .tag-wrap
     {
         flex-wrap: wrap;
@@ -1038,4 +1023,12 @@ footer a.under
      width: 40px;
      left: 68%;
     }
+    
+    .grid-conhec
+    {
+      display: block;
+      width: 100%;
+
+    }
+
 }
